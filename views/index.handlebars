@@ -1,5 +1,8 @@
 <div data-role='header'>KidTracker</div>
 <div class='ui-content'>
+	{{#if message}}
+    		<div class="alert alert-danger">{{message}}</div>
+	{{/if}}
 	<form id='frmLogin' action='/login' method='post'>
 		<div class='ui-field-contain'>
 			<label for='username'>User Name</label>
@@ -9,7 +12,7 @@
 			<label for='password'>Password</label> 
 			<input type='password' id='password' name='password' placeholder='password' required />
 		</div>
-		<button id='btnLogin' type='button' css='ui-btn'>Login</button> 
+		<button id='btnLogin' type='submit' css='ui-btn'>Login</button> 
 	</form>
 	<a href='/signup'>register a new account</a>
 </div>
