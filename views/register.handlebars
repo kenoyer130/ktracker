@@ -1,0 +1,31 @@
+<script type='text/javascript'>
+	$(document).ready(function() {
+		$("#btnCreate").click(function() {
+			if($("#password").val() != $("#cpassword").val()) {
+				alert("password and confirm password do not match!");
+			} else {
+				$("#frmSignUp").submit();	
+			}	
+		});
+	});
+</script>
+
+<div data-role='header'>Create KidTracker Account</div>
+<div class='ui-content'>
+	<form id='frmSignup' action='/signup' method='post'>
+		<div class='ui-field-contain'>
+			<label for='username'>User Name</label>
+			<input type='text' name='username' placeholder='UserName' required autofocus />
+		</div>
+		<div class='ui-field-contain'>
+			<label for='password'>Password</label> 
+			<input type='password' id='password' name='password' placeholder='password' required />
+		</div>
+		<div class='ui-field-contain'>
+			<label for='cpassword'>Confirm</label> 
+			<input type='password' id='cpassword' name='cpassword' placeholder='confirm' required />
+		</div>
+		<button id='btnLogin' type='button' css='ui-btn'>Register</button> 
+	</form>
+</div>
+<div data-role='footer' />
